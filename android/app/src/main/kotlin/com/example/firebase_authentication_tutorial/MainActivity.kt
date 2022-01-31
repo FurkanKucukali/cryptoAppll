@@ -1,4 +1,4 @@
-package com.example.firebase_authentication_tutorial
+package com.example.cryptoAppll
 
 import io.flutter.embedding.android.FlutterActivity
 

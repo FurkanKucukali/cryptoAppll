@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "196644550950",
-    "firebase_url": "https://fir-tutorial-c51d1.firebaseio.com",
-    "project_id": "fir-tutorial-c51d1",
-    "storage_bucket": "fir-tutorial-c51d1.appspot.com"
+    "project_number": "308674267883",
+    "project_id": "flutterfirebase-326f0",
+    "storage_bucket": "flutterfirebase-326f0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:196644550950:android:cfcc29269cb25787a5a9e7",
+        "mobilesdk_app_id": "1:308674267883:android:eeec1edb100620440e4cae",
         "android_client_info": {
-          "package_name": "com.example.firebase_authentication_tutorial"
+          "package_name": "com.example.cryptoAppll"
         }
       },
       "oauth_client": [
         {
-          "client_id": "196644550950-et9u3r9qqa2h7v54k7mig4hqbtd6fst0.apps.googleusercontent.com",
+          "client_id": "308674267883-o2g3mnijfpk8563t6fq3pq9pnloaugma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cryptoAppll",
+            "certificate_hash": "b6738941b5944ac5019a70492a623df096925b94"
+          }
+        },
+        {
+          "client_id": "308674267883-2e9r53gji695c2u74gtlfn5hlgiukk7l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDkPF_EbgZUKaIPrM78gsqn4aId_wu0h0s"
+          "current_key": "AIzaSyB_6ESCjDyWQexABnnKcCgciPMKrZxp790"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "196644550950-et9u3r9qqa2h7v54k7mig4hqbtd6fst0.apps.googleusercontent.com",
+              "client_id": "308674267883-2e9r53gji695c2u74gtlfn5hlgiukk7l.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
