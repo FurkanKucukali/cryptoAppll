@@ -16,77 +16,80 @@ class SignInPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 200,),
+            SizedBox(
+              height: 200,
+            ),
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                border: Border.all(
-                    color: Colors.white, width: 1.25),
+                border: Border.all(color: Colors.white, width: 1.25),
               ),
               child: TextField(
                 style: TextStyle(color: Colors.white),
-
                 controller: emailController,
                 decoration: InputDecoration(
                     hintText: "  Email",
-                    hintStyle: TextStyle(color: Colors.grey)
-                ),
+                    hintStyle: TextStyle(color: Colors.grey)),
               ),
             ),
-            SizedBox(height: 25,),
+            SizedBox(
+              height: 25,
+            ),
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                border: Border.all(
-                    color: Colors.white, width: 1.25),
+                border: Border.all(color: Colors.white, width: 1.25),
               ),
               child: TextField(
+                maxLines: 1,
+                keyboardType: TextInputType.text,
                 style: TextStyle(color: Colors.white),
                 controller: passwordController,
+                obscureText: true,
                 decoration: InputDecoration(
-                  hintText: "  Password",
-                  hintStyle: TextStyle(color: Colors.grey)
-                ),
+                    hintText: "  Password",
+                    hintStyle: TextStyle(color: Colors.grey)),
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Container(
               width: 120,
               height: 40,
-
-
               child: RaisedButton(
                 color: Colors.grey.shade300,
                 elevation: 2,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
                 onPressed: () async {
-                   context.read<AuthenticationService>().signIn(
-                        email: emailController.text.trim(),
-                        password: passwordController.text.trim(),
-                      );
-
-
+                  if (passwordController.text.length > 6 &&
+                      emailController.text.contains("@")) {
+                    context.read<AuthenticationService>().signIn(
+                          email: emailController.text.trim(),
+                          password: passwordController.text.trim(),
+                        );
+                  }
                 },
-                child: Text("Sign in"),
+                child: Text("Giriş"),
               ),
-            ), SizedBox(height: 20,),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             Container(
               width: 120,
               height: 40,
-
-
               child: RaisedButton(
                 color: Colors.grey.shade300,
                 elevation: 2,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
                 onPressed: () async {
-                  Navigator.push(context, MaterialPageRoute(builder: (builder) => SignUpPage()));
-
-
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (builder) => SignUpPage()));
                 },
-                child: Text("Sign up"),
+                child: Text("Kayıt ol"),
               ),
             )
           ],

@@ -48,6 +48,8 @@ class SignUpPage extends StatelessWidget {
               child: TextField(
                 style: TextStyle(color: Colors.white),
                 controller: passwordController,
+                obscureText: true,
+
                 decoration: InputDecoration(
                     hintText: "  Password",
                     hintStyle: TextStyle(color: Colors.grey)
@@ -98,6 +100,7 @@ class SignUpPage extends StatelessWidget {
               child: TextField(
                 style: TextStyle(color: Colors.white),
 
+
                 controller: soyadController,
                 decoration: InputDecoration(
                     hintText: "  Soyad",
@@ -116,31 +119,66 @@ class SignUpPage extends StatelessWidget {
                 elevation: 2,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
 
+
                 onPressed: () async {
-                String value = await context.read<AuthenticationService>().signUp(
-                    email: emailController.text.trim(),
-                    password: passwordController.text.trim(),
-                  );
+                  if(passwordController.text.length > 6 && emailController.text.contains("@") ) {
+                    String value = await context.read<AuthenticationService>()
+                        .signUp(
+                      email: emailController.text.trim(),
+                      password: passwordController.text.trim(),
+                    );
 
-                await _firestore.collection("users").doc("$value").collection("contact").doc("contact").set({"Ad":adController.text,"Soyad":soyadController.text,"no":noController.text});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("dolar").set({"value":150000});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("Bitcoin").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("Ethereum").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("Solana").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("Terra").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("BNB").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("Avalanche").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("XRP").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("USD Coin").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("Polkadot").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("Tether").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("Cardano").set({"value":0});
-                await _firestore.collection("users").doc("$value").collection("wallet").doc("DogeCoin").set({"value":0});
-                Navigator.push(context, MaterialPageRoute(builder: (builder) => Coinvalue(Uid: value,)));
-
-
+                    await _firestore.collection("users").doc("$value")
+                        .collection("contact").doc("contact")
+                        .set({
+                      "Ad": adController.text,
+                      "Soyad": soyadController.text,
+                      "no": noController.text
+                    });
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("dolar")
+                        .set({"value": 150000});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("Bitcoin")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("Ethereum")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("Solana")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("Terra")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("BNB")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("Avalanche")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("XRP")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("USD Coin")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("Polkadot")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("Tether")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("Cardano")
+                        .set({"value": 0});
+                    await _firestore.collection("users").doc("$value")
+                        .collection("wallet").doc("DogeCoin")
+                        .set({"value": 0});
+                    Navigator.push(context, MaterialPageRoute(
+                        builder: (builder) => Coinvalue(Uid: value,)));
+                  }
                 },
-                child: Text("Sign Up"),
+                child: Text("Kayıt ol"),
               ),
             )
           ],

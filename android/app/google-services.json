@@ -7,9 +7,75 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:308674267883:android:eeec1edb100620440e4cae",
+        "mobilesdk_app_id": "1:308674267883:android:bc31f1839e065d580e4cae",
+        "android_client_info": {
+          "package_name": "com.edqw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308674267883-2e9r53gji695c2u74gtlfn5hlgiukk7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_6ESCjDyWQexABnnKcCgciPMKrZxp790"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308674267883-2e9r53gji695c2u74gtlfn5hlgiukk7l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308674267883:android:6cffbc27636c98810e4cae",
         "android_client_info": {
           "package_name": "com.example.cryptoAppll"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308674267883-2ivgg41ut892c791cm417nh9lqrm393j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cryptoAppll",
+            "certificate_hash": "b6738941b5944ac5019a70492a623df096925b94"
+          }
+        },
+        {
+          "client_id": "308674267883-2e9r53gji695c2u74gtlfn5hlgiukk7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_6ESCjDyWQexABnnKcCgciPMKrZxp790"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308674267883-2e9r53gji695c2u74gtlfn5hlgiukk7l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308674267883:android:eeec1edb100620440e4cae",
+        "android_client_info": {
+          "package_name": "com.example.firebase_authentication_tutorial"
         }
       },
       "oauth_client": [
@@ -17,7 +83,7 @@
           "client_id": "308674267883-o2g3mnijfpk8563t6fq3pq9pnloaugma.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.cryptoAppll",
+            "package_name": "com.example.firebase_authentication_tutorial",
             "certificate_hash": "b6738941b5944ac5019a70492a623df096925b94"
           }
         },

@@ -13,7 +13,7 @@ import 'Screens/coinscreen.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  //FirebaseAuth.instance.signOut();
+
 
   runApp(MyApp());
 

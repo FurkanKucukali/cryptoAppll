@@ -127,7 +127,7 @@ class _CoinvalueState extends State<Coinvalue> {
              SizedBox(height: 20,),
              Row(mainAxisAlignment: MainAxisAlignment.center,children: [ Text("No: ",style: TextStyle(color: Colors.white,fontSize: 25),), Text(" ${contactvalue["no"]}",style: TextStyle(color: Colors.grey.shade200,fontSize: 25),),]),
              SizedBox(height: 25,),
-             Row(mainAxisAlignment: MainAxisAlignment.center,children: [ Text("Dolar: ",style: TextStyle(color: Colors.white,fontSize: 25),), Text(" ${walletdolar} ",style: TextStyle(color: Colors.grey.shade200,fontSize: 25),),]),
+             Row(mainAxisAlignment: MainAxisAlignment.center,children: [ Text("Bakiye: ",style: TextStyle(color: Colors.white,fontSize: 25),), Text(" ${walletdolar} ",style: TextStyle(color: Colors.grey.shade200,fontSize: 25),),]),
 
            ],
          ),
@@ -138,6 +138,7 @@ class _CoinvalueState extends State<Coinvalue> {
          width: 200,
          child: RaisedButton(child: Text("Oturum Kapat"),onPressed: ()  {
            FirebaseAuth.instance.signOut();
+           Navigator.push(context, MaterialPageRoute(builder: (builder)=>SignInPage()));
            setState(() {});
          },color :Colors.grey.shade100),
        )
@@ -476,12 +477,7 @@ class _CoinvalueState extends State<Coinvalue> {
 
     value.forEach((element) {
       if (element.name == dropdownValue) {
-        coin = value
-            .elementAt(index)
-            .quoteModel
-            .usdModel
-            .volume24h
-            .toStringAsFixed(4);
+        coin = value.elementAt(index).quoteModel.usdModel.volume24h.toStringAsFixed(4);
       }
       index++;
     });
@@ -494,12 +490,7 @@ class _CoinvalueState extends State<Coinvalue> {
 
     value.forEach((element) {
       if (element.name == dropdownValue) {
-        coin = value
-            .elementAt(index)
-            .quoteModel
-            .usdModel
-            .percentChange24h
-            .toStringAsFixed(3);
+        coin = value.elementAt(index).quoteModel.usdModel.percentChange24h.toStringAsFixed(3);
       }
       index++;
     });
